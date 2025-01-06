@@ -1,0 +1,45 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-main-visual {
+    width: 100%;
+    height: 850px;
+    background-color: var.$black;
+    position: relative;
+
+    .img__container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        .main-visual__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 0 70%;
+
+            animation: fadeInOut-zoom 8s ease 0s infinite normal none;
+        }
+    }
+
+    .catch-copy {
+        font-family: "Teko", serif;
+        font-weight: 400;
+        color: var.$white;
+        letter-spacing: 0.05rem;
+        position: absolute;
+        bottom: 40px;
+        left: 5%;
+
+        h1 {
+            font-size: 13.0rem;
+            font-weight: 400;
+            text-shadow: 0.5px 0.5px 0 var.$black;
+        }
+
+        p {
+            font-size: 4.0rem;
+        }
+    }
+}

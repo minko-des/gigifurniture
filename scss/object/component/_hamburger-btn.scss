@@ -1,0 +1,28 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.c-hamburger-btn {
+    width: 36px;
+    height: 2px;
+    background-color: black;
+    position: relative;
+}
+.c-hamburger-btn::before {
+    content: "";
+    width: 36px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    transform: translateX(-50%);
+    top: -10px;
+}
+.c-hamburger-btn::after {
+    content: "";
+    width: 36px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 10px;
+}

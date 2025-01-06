@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-partner {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    align-items: center;
+
+    h2 {
+        font-family: "Teko", serif;
+        color: var.$black;
+        font-size: 4.0rem;
+        font-weight: 500;
+        letter-spacing: 0.2rem;
+        margin-left: 13%;
+    }
+
+    .logo-wrap {
+        margin-left: 6%;
+
+        .logo__uag {
+            width: 84PX;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

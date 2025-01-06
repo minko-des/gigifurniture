@@ -1,0 +1,212 @@
+@-webkit-keyframes slideInFromRight {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slideInFromUnder {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInFromUnder {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes downArrow {
+  0% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(70%);
+    opacity: 0;
+  }
+}
+@keyframes downArrow {
+  0% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(70%);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes fadeInOut-zoom {
+  0% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+@keyframes fadeInOut-zoom {
+  0% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+.p-footer {
+  width: 38%;
+  height: 100%;
+  background-color: rgba(39, 39, 39, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.p-footer .c-contact-btn--large {
+  margin-top: 72px;
+}
+.p-footer .footer_nav {
+  margin-top: 64px;
+}
+.p-footer .footer_nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.p-footer .footer_nav ul .nav-menu {
+  font-family: "Teko", serif;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #EFF1F7;
+  letter-spacing: 0.1rem;
+  margin-bottom: 26px;
+}
+.p-footer .footer_nav ul .insta-icon {
+  width: 24px;
+  height: 24px;
+}
+.p-footer .footer_nav ul .insta-icon a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.p-footer .footer_nav ul .insta-icon a .cls-1 {
+  fill: #EFF1F7;
+  filter: drop-shadow(20px 20px 0 #14161B);
+}
+/*# sourceMappingURL=p-footer.css.map */

@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@use "variables" as var;
+
+
+html {
+    font-size: 62.5%  /* 1rem=16pxを10pxに変換 */
+}
+
+body {
+    background: white;
+    min-width: 320px;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.2;
+    // color: var.$brown_txt;
+}
+
+img {
+    //max-width: 100%;  //画面幅より大きく表示させないようにする　archiveページのメインビジュアルに不都合のため削除
+    height: auto;
+    vertical-align: middle;  //デフォルトの余白を無くす
+}
+
+h1, h2, h3, h4, h5, h6, p, figure {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 3.6rem;
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
+h4, h5, h6 {
+    font-size: 2.0rem;
+}
+p, figure {
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none;  //アンダーラインを無くす
+    color: inherit;  //親要素のスタイルを継承する
+}
+
+ul, ol {
+    list-style-type: none;  //・を無くす
+}

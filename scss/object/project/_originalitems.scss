@@ -1,0 +1,81 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-originalitems {
+    margin-top: 160px;
+    position: relative;
+
+    .heading__plate {
+        width: 78%;
+        height: 186px;
+        background-color: var.$black;
+        border-radius: 0 10px 10px 0;
+
+        h2 {
+            font-size: clamp(6.0rem, 8.5vw, 12rem);
+            color: var.$white;
+            line-height: 186px;
+            margin-left: 35%;
+        }
+    }
+
+    .originalitems__lead {
+        margin: 50px auto 0 auto;
+        display: flex;
+        justify-content: center;
+
+        .c-square-mark {
+            margin-right: 18px;
+            align-self: center;
+        }
+
+        p {
+            font-size: 2.4rem;
+            font-weight: 500;
+        }
+    }
+
+    .originalitems__text {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-top: 24px;
+    }
+
+    .slider {
+        height: 350px;
+        margin-top: 64px;
+
+        z-index: 1;
+
+        background-color: antiquewhite;
+    }
+
+    .deco-plate {
+        width: 21%;
+        height: 244px;
+        background-color: var.$black;
+        border-radius: 10px 0 0 10px;
+        position: absolute;
+        right: 0;
+        top: 653px;
+
+        span {
+            font-family: "Big Shoulders Stencil Text", serif;
+            color: var.$white;
+            font-size: 6.4rem;
+            font-weight: 700;
+            display: inline-block;
+            position: absolute;
+            right: 10%;
+            bottom: 12px;
+        }
+    }
+
+    .c-link-btn {
+        margin: 64px auto 0 auto;
+        color: var.$black;
+        background-color: var.$white;
+        border: 1px solid var.$black;
+    }
+}

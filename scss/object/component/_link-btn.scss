@@ -1,0 +1,55 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.c-link-btn {
+    width: 450px;
+    height: 72px;
+    background-color: var.$black;
+    color: var.$white;
+    border: 1px solid var.$white;
+    transition: all 0.2s;
+
+    a {
+        display: inline-block;
+        width: 100%;
+        line-height: 72px;
+
+        span {
+            display: inline-block;
+            width: 100%;
+            font-size: 2.0rem;
+            font-weight: 500;
+            position: relative;
+            padding-left: 50px;
+        }
+
+        span::before {
+            content: "";
+            width: 14px;
+            height: 1.4px;
+            background-color: var.$fire;
+            position: absolute;
+            right: 60px;
+            top: 52%;
+            transform: rotate(40deg);
+            transform-origin: bottom right;
+        }
+        span::after {
+            content: "";
+            width: 32px;
+            height: 1.2px;
+            background-color: var.$fire;
+            position: absolute;
+            right: 60px;
+            top: 52%;
+        }
+    }
+}
+.c-link-btn:hover {
+    background-color: rgba( 239, 241, 247, 0.3);
+    color: var.$black;
+}
+.c-link-btn:hover a span::before,.c-link-btn:hover a span::after {
+    transition: 0.2s;
+}

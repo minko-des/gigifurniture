@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- レスポンシブに必要 -->
+    <title>minko-portfolio</title>
+    <meta name="description" content="WEBデザイナー、フロントエンドエンジニアを目指しています。">  <!-- ページの内容を表す文章を書く、検索結果のタイトル下に表示される -->
+    <meta name="keywords" content="minko,portfolio,webdesign,frontendengineer">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="#" sizes="16x16" type="image/png">  <!-- ファビコン読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <!-- jqueryのライブラリ読み込み -->
+    <script defer src="./js/main.js"></script>  <!-- javaScriptファイル読み込み -->
+</head>
+<body>
+    <div class="l-wrapper">
+        <section class="l-menubar">
+            <div class="p-menubar c-heading--playfair-display">
+                <div class="menubar-title">
+                    <h1><a href="./index.html">MINKO</a>
+                    <span>portfolio site</span>
+                    </h1>
+                </div>
+                <nav class="p-nav">
+                    <ul class="nav-menu">
+                        <li class="nav-menu__about"><a href="./page-about.html">About</a></li>
+                        <li class="nav-menu__work"><a href="./index.html#works">Work</a></li>
+                        <li class="nav-menu__contact"><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <main class="l-main">
+            <header class="l-header">
+                <div class="p-header under-page__header-style">
+                    <div class="header-title c-heading--playfair-display">
+                        <h1><a href="./index.html">MINKO</a><span>portfolio site</span></h1>
+                    </div>
+                    <div class="menu-btn">
+                        <button class="c-hamburger-btn"></button>
+                    </div>
+                </div>
+            </header>
+
+            <section class="p-single__main-visual">
+                <h2 class="single-title c-heading--playfair-display">Work<span>製作品</span></h2>
+                <div class="main-visual__content">
+                    <p class="product-title c-heading--noto-sans-jp">GBTサービス WEBサイト</p>
+                    <div class="img-frame">
+                        <img src="./images/gbt-site.jpg" alt="制作品サムネイル">
+                    </div>
+                    <button class="c-link-btn slideInFromRight"><a href="./page-about.html"><pre class="c-heading--inter">WEBサイトを見る</pre></a></button>
+                </div>
+            </section>
+
+            <section class="p-single__article-area c-heading--noto-sans-jp">
+                <div class="article__description slideInFromUnder">
+                    <p class="article__description__tag c-tag__work-type--large">クライアントワーク</p>
+                    <p class="article__description__text">自動車販売・修理・カスタムを行う会社「GBTサービス」様のWEBサイト制作をしました。
+                        ディレクション、デザイン制作を担当しました。</p>
+                </div>
+                <div class="article__detail">
+                    <div class="article__detail__items-wrap">
+                        <div class="article__detail__item slideInFromUnder">
+                            <h3 class="article__detail__item__title">要望・コンセプト</h3>
+                            <p class="article__detail__item__text">会社の看板車であり、すでに認知度のあるバナナフィガロをアピールしてもっと会社のことも認知してもらいたい。
+                                カスタムペイントの魅力を伝えたい。
+                                過去の施工事例をクライアント様が簡単に投稿できるようにする。
+                                ポップなデザインで親しみやすいイメージに。</p>
+                        </div>
+                        <div class="article__detail__item slideInFromUnder">
+                            <h3 class="article__detail__item__title">デザイン</h3>
+                            <p class="article__detail__item__text">フィガロの「全体的に丸みがありかわいらしく、各パーツが個性的」なイメージを表すため、各要素には丸みをつけ、見出しやキャッチコピーには輪郭線を付けることでコントラストを強調しました。
+                                フィガロのイメージを強く残すため、アクセントカラーは黄色にし、各リンクボタンやマウスオーバーの挙動に使用しました。
+                                使用する写真がビビットカラーが多いためデザインに使用するカラーの種類は少なめにし、落ち着きのあるベースカラーにしました。</p>
+                        </div>
+                        <div class="article__detail__item slideInFromUnder">
+                            <h3 class="article__detail__item__title">CMS化を考慮</h3>
+                            <p class="article__detail__item__text">記事投稿用ページはクライアント自らが運用、管理をしやすいようシンプルな構成にし、カテゴリタグ、ページネーションの機能を考慮しデザインに織り込みました。</p>
+                        </div>
+                    </div>
+                    <div class="category-wrap">
+                        <div class="category slideInFromUnder">
+                            <h3 class="category__title">担当</h3>
+                            <ul class="category__items c-heading--inter">
+                                <li>Direction</li>
+                                <li>Design</li>
+                                <li>Coding</li>
+                                <li>Deploy</li>
+                            </ul>
+                        </div>
+                        <div class="category slideInFromUnder">
+                            <h3 class="category__title">ツール</h3>
+                            <ul class="category__items c-heading--inter">
+                                <li>Figma</li>
+                                <li>Illustrator</li>
+                                <li>Photoshop</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-text--production">Production</div>
+                <div class="bg-text--actions">Actions</div>
+            </section>
+            
+            <section class="p-single__gallery slideInFromUnder">
+                <div class="bg-text--works">Works Display</div>
+                <div class="gallery__img">
+                    <img src="./images/gbt-top.png" alt="制作品の画像">
+                </div>
+            </section>
+
+            <footer class="l-footer" id="contact">
+                <div class="p-footer  c-heading--playfair-display">
+                    <div class="text-shape fadeIn"><span>MINKO</span></div>
+                    <div class="contact-content">
+                        <h2 class="p-section-title">Contact</h2>
+                        <div class="contact-info">
+                            <p>minko-des@gmail.com</p>
+                            <a href="#"><img src="./images/insta-icon.png" alt="インスタのアイコン"></a>
+                        </div>
+                    </div>
+                    <small class="copyright c-heading--inter">© MINKO portfolio 2024</small>
+                </div>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

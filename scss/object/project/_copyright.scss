@@ -1,0 +1,21 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-copyright {
+    width: 100%;
+    height: 40px;
+    background-color: var.$black;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.4rem;
+    color: var.$white;
+    letter-spacing: 0.1rem;
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    @include var.breakpoint(tablet) {
+        height: 52px;
+        line-height: 52px;
+    }
+}

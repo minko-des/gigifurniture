@@ -1,0 +1,11 @@
+@charset "UTF-8";
+@use "../foundation/variables" as var;
+
+
+.l-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+}

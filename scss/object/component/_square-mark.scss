@@ -1,0 +1,10 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.c-square-mark {
+    width: 16px;
+    height: 16px;
+    border-radius: 1px;
+    background-color: var.$fire;
+}

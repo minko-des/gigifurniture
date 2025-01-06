@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+
+//メディアクエリ定義
+@mixin breakpoint($point) {
+    @if $point==tablet {
+        @media (min-width: 768px) {
+            @content ;
+        }
+    }
+    @if $point==pc {
+        @media (min-width: 1100px) {
+            @content ;
+        }
+    }
+}

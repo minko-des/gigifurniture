@@ -1,0 +1,17 @@
+@charset "UTF-8";
+@use "../foundation/variables" as var;
+
+
+.l-footer {
+    width: 100%;
+    height: 652px;
+    background-image: url(../../../images/footer.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(39, 39, 39, 0.3);
+    background-blend-mode: multiply;
+    position: relative;
+    @include var.breakpoint(pc) {
+        height: 752px;
+    }
+}

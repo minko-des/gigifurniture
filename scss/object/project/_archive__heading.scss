@@ -1,0 +1,44 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-archive__heading {
+    margin: 130px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var.$white;
+    @include var.breakpoint(tablet) {
+        margin-top: 160px;
+    }
+    @include var.breakpoint(pc) {
+        margin-top: 200px;
+    }
+
+    h1 {
+        font-family: "Big Shoulders Stencil Text", serif;
+        font-size: clamp( 6.0rem, 7.0vw, 11.0rem);
+        font-weight: 700;
+    }
+
+    p {
+        font-size: clamp( 2.2rem, 2.0vw, 3.4rem);
+        white-space: pre;
+        margin-top: 12px;
+    }
+}
+
+.l-wrapper.archive-page .l-main .bg-text {
+    font-family: "Oswald", serif;
+    font-size: clamp( 7.5rem, 17.0vw, 26.0rem);
+    color: var.$white;
+    opacity: 6%;
+    position: fixed;
+    top: 230px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    @include var.breakpoint(pc) {
+        top: 290px;
+    }
+}

@@ -16,9 +16,11 @@
 //object_component
 @use "object/component/link-btn";
 @use "object/component/contact-btn";
-@use "object/component/hamburger-btn";
+@use "object/component/menu-btn";
 @use "object/component/section__title";
 @use "object/component/square-mark";
+@use "object/component/slider-btn";
+@use "object/component/insta-icon";
 
 //object_project
 @use "object/project/catch";
@@ -32,6 +34,12 @@
 @use "object/project/instagram";
 @use "object/project/partner";
 @use "object/project/copyright";
+@use "object/project/swiper-area";
+@use "object/project/sidebar";
+@use "object/project/archive__heading";
+@use "object/project/archive__content";
+@use "object/project/pagination";
 
 //object_utility
 @use "object/utility/active-animation";
+@use "object/utility/noScroll";

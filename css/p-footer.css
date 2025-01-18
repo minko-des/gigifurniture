@@ -167,9 +167,9 @@
   }
 }
 .p-footer {
-  width: 38%;
+  width: 100%;
   height: 100%;
-  background-color: rgba(39, 39, 39, 0.8);
+  background-color: rgba(39, 39, 39, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -177,11 +177,24 @@
   top: 0;
   right: 0;
 }
-.p-footer .c-contact-btn--large {
-  margin-top: 72px;
+@media (min-width: 768px) {
+  .p-footer {
+    width: 54%;
+    background-color: rgba(39, 39, 39, 0.8);
+  }
+}
+@media (min-width: 1100px) {
+  .p-footer {
+    width: 38%;
+  }
 }
 .p-footer .footer_nav {
-  margin-top: 64px;
+  margin-top: 60px;
+}
+@media (min-width: 1100px) {
+  .p-footer .footer_nav {
+    margin-top: 64px;
+  }
 }
 .p-footer .footer_nav ul {
   display: flex;
@@ -194,19 +207,38 @@
   font-size: 2rem;
   color: #EFF1F7;
   letter-spacing: 0.1rem;
-  margin-bottom: 26px;
+  margin-bottom: 30px;
 }
-.p-footer .footer_nav ul .insta-icon {
+.p-footer .footer_nav ul .c-insta-icon {
   width: 24px;
   height: 24px;
 }
-.p-footer .footer_nav ul .insta-icon a {
+.p-footer .gigifurniture-logo {
+  width: 104px;
+  margin-top: 64px;
+  transition: 0.3s;
+}
+@media (min-width: 1100px) {
+  .p-footer .gigifurniture-logo {
+    width: 134px;
+    margin-top: 80px;
+  }
+}
+.p-footer .gigifurniture-logo a {
   display: inline-block;
   width: 100%;
-  height: 100%;
 }
-.p-footer .footer_nav ul .insta-icon a .cls-1 {
+.p-footer .gigifurniture-logo a svg .logo-group {
   fill: #EFF1F7;
-  filter: drop-shadow(20px 20px 0 #14161B);
+}
+.p-footer .gigifurniture-logo a svg .logo-group .logo_furniture .logo_furniture_text-wrap .logo_furniture_text {
+  fill: #242526;
+}
+.p-footer .footer_nav ul .nav-menu:hover {
+  transform: translateY(-2px);
+  transition: 0.3s;
+}
+.p-footer .gigifurniture-logo:hover {
+  opacity: 0.6;
 }
 /*# sourceMappingURL=p-footer.css.map */

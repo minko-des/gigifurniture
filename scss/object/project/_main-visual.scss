@@ -4,9 +4,12 @@
 
 .p-main-visual {
     width: 100%;
-    height: 850px;
+    height: 740px;
     background-color: var.$black;
     position: relative;
+    @include var.breakpoint(pc) {
+        height: 850px;
+    }
 
     .img__container {
         width: 100%;
@@ -23,23 +26,60 @@
         }
     }
 
-    .catch-copy {
+    .catch-copy,.concept {
         font-family: "Teko", serif;
         font-weight: 400;
         color: var.$white;
         letter-spacing: 0.05rem;
+    }
+
+    .catch-copy {
+        font-size: 10.0rem;
+        line-height: 0.8;
+        text-shadow: 0.5px 0.5px 0 var.$black;
         position: absolute;
         bottom: 40px;
         left: 5%;
-
-        h1 {
+        @include var.breakpoint(tablet) {
+            font-size: 12.0rem;
+        }
+        @include var.breakpoint(pc) {
             font-size: 13.0rem;
-            font-weight: 400;
-            text-shadow: 0.5px 0.5px 0 var.$black;
+            bottom: 186px;
         }
 
-        p {
+        span {
+            display: block;
+            @include var.breakpoint(pc) {
+                display: inline;
+            }
+        }
+    }
+
+    .concept {
+        font-size: 2.6rem;
+        text-align: end;
+        position: absolute;
+        top: 160px;
+        right: 5%;
+        @include var.breakpoint(pc) {
             font-size: 4.0rem;
+            text-align: start;
+
+            bottom: 60px;
+            left: 5%;
+            top: auto;
+            right: auto;
+        }
+
+        span {
+            display: block;
+            @include var.breakpoint(pc) {
+                display: inline;
+            }
+        }
+        .br-point {
+            margin-top: 4px;
         }
     }
 }

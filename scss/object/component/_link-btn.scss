@@ -2,54 +2,106 @@
 @use "../../foundation/variables" as var;
 
 
-.c-link-btn {
-    width: 450px;
-    height: 72px;
+.c-link-btn--black,.c-link-btn--white {
+    width: 300px;
+    height: 60px;
     background-color: var.$black;
     color: var.$white;
     border: 1px solid var.$white;
     transition: all 0.2s;
+    @include var.breakpoint(tablet) {
+        width: 420px;
+        height: 72px;
+    }
 
     a {
         display: inline-block;
         width: 100%;
-        line-height: 72px;
+        line-height: 60px;
+        @include var.breakpoint(tablet) {
+            line-height: 72px;
+        }
 
         span {
             display: inline-block;
             width: 100%;
-            font-size: 2.0rem;
+            font-size: 1.8rem;
             font-weight: 500;
             position: relative;
-            padding-left: 50px;
+            padding-left: 40px;
+            @include var.breakpoint(tablet) {
+                font-size: 2.0rem;
+                padding-left: 50px;
+            }
         }
 
         span::before {
             content: "";
             width: 14px;
-            height: 1.4px;
+            height: 1.0px;
             background-color: var.$fire;
             position: absolute;
-            right: 60px;
+            right: 40px;
             top: 52%;
             transform: rotate(40deg);
             transform-origin: bottom right;
+            @include var.breakpoint(tablet) {
+                height: 1.4px;
+                right: 60px;
+            }
         }
+
         span::after {
             content: "";
             width: 32px;
-            height: 1.2px;
+            height: 1.0px;
             background-color: var.$fire;
             position: absolute;
-            right: 60px;
+            right: 40px;
             top: 52%;
+            @include var.breakpoint(tablet) {
+                height: 1.4px;
+                right: 60px;
+            }
         }
     }
 }
-.c-link-btn:hover {
+
+.c-link-btn--white {
+    color: var.$black;
+    background-color: var.$white;
+    border: 1px solid var.$black;
+}
+
+.c-link-btn--black:hover {
     background-color: rgba( 239, 241, 247, 0.3);
     color: var.$black;
+    border-color: var.$black;
 }
-.c-link-btn:hover a span::before,.c-link-btn:hover a span::after {
-    transition: 0.2s;
+.c-link-btn--white:hover {
+    background-color: rgba( 20, 22, 27);
+    color: var.$white;
+    border-color: var.$white;
+}
+
+.c-link-btn--black:hover,.c-link-btn--white:hover {
+    a {
+        span::before {
+            right: 26px;
+            transition: 0.6s;
+            @include var.breakpoint(tablet) {
+                height: 1.8px;
+                right: 46px;
+            }
+        }
+        span::after {
+            width: 60px;
+            right: 26px;
+            transition: 0.6s;
+            @include var.breakpoint(tablet) {
+                width: 60px;
+                right: 46px;
+            }
+        }
+    }
 }

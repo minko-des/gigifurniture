@@ -1,0 +1,111 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-swiper-area {
+    height: 220px;
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    @include var.breakpoint(tablet) {
+        height: 350px;
+
+        margin-top: 64px;
+    }
+
+    .swiper {
+        height: 100%;
+
+        .swiper-wrapper .swiper-slide {
+            width: auto;
+
+            .item {
+                height: 100%;
+                aspect-ratio: 1 / 1;
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    
+    .swiper-button-prev,.swiper-button-next {
+        color: var.$black;
+    }
+    .swiper-button-prev {
+        left: -40px;
+    }
+    .swiper-button-next {
+        right: -40px;
+    }
+
+    .swiper-pagination-bullets {
+        position: static;
+        margin-top: 8px;
+    }
+    .swiper-pagination-bullet-active {
+        background: var.$fire;
+    }
+}
+
+
+    // ボタンのスタイル（サークルタイプ）
+    // .swiper-buttom-wrap {
+    //     width: 90%;
+    //     height: 56px;
+    //     max-width: 1400px;
+    //     margin: 0 auto;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate( -50%, -50%);
+
+    //     .swiper-button-prev,.swiper-button-next {
+    //         width: 56px;
+    //         height: 56px;
+    //         border-radius: 50%;
+    //         background-color: var.$white;
+    //         border: 1px solid var.$black;
+            
+    //         span {
+    //             display: inline-block;
+    //             width: 100%;
+    //             height: 100%;
+    //             position: relative;
+    //         }
+    //         span::before {
+    //             content: "";
+    //             width: 16px;
+    //             height: 1px;
+    //             background-color: var.$black;
+    //             position: absolute;
+    //             left: 35%;
+    //             top: 50%;
+    //             transform: rotate(-45deg);
+    //             transform-origin: bottom left;
+    //         }
+    //         span::after {
+    //             content: "";
+    //             width: 16px;
+    //             height: 1px;
+    //             background-color: var.$black;
+    //             position: absolute;
+    //             left: 35%;
+    //             top: 50%;
+    //             transform: rotate(45deg);
+    //             transform-origin: top left;
+    //         }
+    //     }
+
+    //     .swiper-button-next {
+    //         transform: rotate(180deg);
+    //     }
+    // }

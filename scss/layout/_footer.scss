@@ -10,6 +10,7 @@
     background-repeat: no-repeat;
     background-color: rgba(39, 39, 39, 0.3);
     background-blend-mode: multiply;
+    background-position: center 0;
     position: relative;
     @include var.breakpoint(pc) {
         height: 752px;

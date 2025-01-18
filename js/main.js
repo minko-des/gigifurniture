@@ -18,7 +18,92 @@ document.addEventListener("DOMContentLoaded", () => {
         imgElement.src = images[currentIndex];
     }, 8000);
 
+
+    // アイテムのスライダー
+    const mySwiper = new Swiper('.swiper', {
+        // Optional parameters
+        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: "4%",
+        centeredSlides: true, //アクティブなスライドを中央に配置
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+
+    // 自動スライダー、無限ループ関数
+    const sliderContainer = document.querySelector(".slider-container");
+    const sliderItem = document.querySelector(".logo-wrap");
+    // 画面幅を取得
+    const screenWidth = window.innerWidth;
+    // アイテムを複製して画面幅を埋める
+    let itemWidth = sliderItem.offsetWidth; //要素幅を取得
+    const itemsNeeded = Math.ceil(screenWidth / itemWidth) + 1; // 画面幅を超えるために+1
+
+    for (let i = 0; i < itemsNeeded; i++) {
+        const clone = sliderItem.cloneNode(true); //要素の複製
+        sliderContainer.appendChild(clone); //複製した要素（clone）をsliderContainerに追加
+    }
+
+    let currentPosition = 0;
+
+    // スライド関数
+    function slide() {
+        currentPosition -= 0.3; // 1フレームあたりの移動量
+        if (Math.abs(currentPosition) >= itemWidth) {
+            currentPosition = 0; // リセット
+            // 先頭のアイテムを末尾に移動
+            const firstItem = sliderContainer.firstElementChild;
+            sliderContainer.appendChild(firstItem);
+        }
+        sliderContainer.style.transform = `translateX(${currentPosition}px)`; // 移動を適用
+        requestAnimationFrame(slide); // アニメーションを繰り返す
+    }
+    
+    window.addEventListener('resize', () => {
+        itemWidth = sliderItem.offsetWidth; // 幅を更新
+        currentPosition = 0; // 位置をリセット
+        sliderContainer.style.transform = `translateX(0px)`; // 位置を初期化
+    });
+    
+    slide();
+
+
+    // メニューページ表示非表示関数
+    const menuBtn = document.querySelector(".c-menu-btn");
+    const sideBar = document.querySelector(".p-sidebar");
+
+    menuBtn.addEventListener("click" , () => {
+        const currentText = menuBtn.textContent;
+        menuBtn.textContent = currentText === "CLOSE" ? "MENU" : "CLOSE";
+        sideBar.classList.toggle("menuOpen");
+
+        toggleBodyScroll();
+    });
+
+    function toggleBodyScroll() {
+        if (sideBar.classList.contains("menuOpen")) {
+            document.body.classList.add("u-noScroll");
+        } else {
+            document.body.classList.remove("u-noScroll");
+        }
+    }
+
+
 });
+
+
+
 
 //     // 下層ページのヘッダーのメニューボタンのカラー切替え
 //     const $hamburgerBtn = $(".c-hamburger-btn");

@@ -33,14 +33,19 @@
     }
 }
 
-
 .c-contact-btn--large {
-    width: 340px;
-    height: 72px;
+    width: 300px;
+    height: 60px;
     color: var.$white;
     border: 2px solid var.$white;
     border-radius: 4px;
+    margin-top: 56px;
     transition: all 0.2s;
+    @include var.breakpoint(pc) {
+        width: 340px;
+        height: 72px;
+        margin-top: 72px;
+    }
 
     a {
         display: inline-block;
@@ -51,13 +56,17 @@
             display: inline-block;
             width: 100%;
             font-family: "Teko", serif;
-            font-weight: 500;
-            font-size: 4.0rem;
+            font-size: 3.6rem;
             color: var.$white;
-            line-height: 72px;
-            letter-spacing: 0.2rem;
+            line-height: 62px;
+            letter-spacing: 0.3rem;
             position: relative;
             padding-left: 50px;
+            transition: all 0.4s;
+            @include var.breakpoint(pc) {
+                font-size: 4.0rem;
+                line-height: 75px;
+            }
         }
 
         span::before {
@@ -67,9 +76,10 @@
             background-color: var.$fire;
             position: absolute;
             right: 60px;
-            top: 52%;
+            top: 50%;
             transform: rotate(40deg);
             transform-origin: bottom right;
+            transition: all 0.4s;
         }
         span::after {
             content: "";
@@ -78,7 +88,29 @@
             background-color: var.$fire;
             position: absolute;
             right: 60px;
-            top: 52%;
+            top: 50%;
+            transition: all 0.4s;
+        }
+    }
+}
+
+.c-contact-btn--large:hover {
+    background-color: rgba(239, 241, 247, 0.5);
+    border: 1px solid var.$black;
+    a {
+        span {
+        font-weight: 500;
+        color: var.$black;
+        letter-spacing: 0.4rem;
+        }
+        span::before {
+            height: 1.8px;
+            right: 46px;
+        }
+        span::after {
+            width: 46px;
+            height: 1.3px;
+            right: 46px;
         }
     }
 }

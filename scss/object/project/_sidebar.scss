@@ -1,0 +1,61 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.p-sidebar {
+    width: 100%;
+    height: 100vh;
+    background-color: var.$black;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    transition: 0.3s;
+
+    .menu {
+        margin-top: 180px;
+        margin-left: 7%;
+
+        .menu__item {
+            margin-bottom: 48px;
+            color: var.$white;
+
+            .menu__title {
+                font-family: "Teko", serif;
+                font-size: 4.0rem;
+                font-weight: 600;
+                letter-spacing: 0.1rem;
+                transition: 0.3s;
+            }
+            
+            .menu__lead {
+                font-family: "Noto Sans JP", sans-serif;
+                font-size: 1.6rem;
+                margin-left: 12px;
+                display: flex;
+                align-items: center;
+
+                .c-square-mark {
+                    margin-right: 10px;
+                    margin-top: 3px;
+                }
+            }
+        }
+    }
+
+    .link-unit {
+        width: 164px;
+        margin-top: 64px;
+        margin-left: 7%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu .menu__item .menu__title:hover {
+        opacity: 0.6;
+    }
+}
+
+.p-sidebar.menuOpen {
+    right: 0;
+}

@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
 // メインビジュアルの画像差し替えアニメーション
     const images = [
         "./images/mainvisual01.jpg",
-        "./images/mainvisual02.jpeg",
-        "./images/mainvisual03.jpeg",
-        "./images/mainvisual04.jpeg",
-        "./images/mainvisual05.jpeg",
+        "./images/mainvisual02.jpg",
+        "./images/mainvisual03.jpg",
+        "./images/mainvisual04.jpg",
+        // "./images/mainvisual05.jpeg",
     ];
     const imgElement = document.querySelector(".main-visual__img");
     let currentIndex = 0;
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Optional parameters
         loop: true,
         slidesPerView: 'auto',
-        spaceBetween: "4%",
+        spaceBetween: "5%",
         centeredSlides: true, //アクティブなスライドを中央に配置
 
         // If we need pagination

@@ -3,7 +3,7 @@
 
 
 .p-swiper-area {
-    height: 220px;
+    height: 240px;
     width: 80%;
     max-width: 1200px;
     margin-top: 40px;
@@ -11,8 +11,7 @@
     margin-right: auto;
     position: relative;
     @include var.breakpoint(tablet) {
-        height: 350px;
-
+        height: 380px;
         margin-top: 64px;
     }
 
@@ -24,7 +23,7 @@
 
             .item {
                 height: 100%;
-                aspect-ratio: 1 / 1;
+                aspect-ratio: 1.2 / 1;
 
                 img {
                     object-fit: cover;
@@ -39,10 +38,10 @@
         color: var.$black;
     }
     .swiper-button-prev {
-        left: -40px;
+        left: -34px;
     }
     .swiper-button-next {
-        right: -40px;
+        right: -34px;
     }
 
     .swiper-pagination-bullets {

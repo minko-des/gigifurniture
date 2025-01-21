@@ -74,3 +74,23 @@
         text-shadow: 0.5px 3.0px 0 var.$black;
     }
 }
+
+.archive-item-page .l-main .l-header .p-header {
+    .gigi-logo a .cls-1 {
+        fill: var.$black;
+        filter: drop-shadow( 2px 2px 4px var.$gray);
+    }
+    .header__nav .menu .menu__item {
+        color: var.$black;
+        a {
+            text-shadow: 0.5px 0.5px 0 var.$gray;
+        }
+    }
+}
+
+.archive-item-page .l-main .l-header .p-header {
+    .link-unit .c-insta-icon a .cls-1 {
+        fill: var.$black;
+        filter: drop-shadow( 20px 20px 0 var.$gray);
+    }
+}

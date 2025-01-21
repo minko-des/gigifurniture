@@ -31,12 +31,12 @@
 
             .product-item__img {
                 width: 100%;
-                aspect-ratio: 1.5 / 1;
+                aspect-ratio: 1.3 / 1;
 
                 img {
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
+                    object-fit: contain;
                 }
             }
 
@@ -67,6 +67,7 @@
                 }
 
                 .text {
+                    line-height: 1.4;
                     padding: 0 2% 6px 2%;
                     margin-top: 12px;
                 }
@@ -74,7 +75,6 @@
         }
 
         .p-product-item--type02 {
-            width: 100%;
 
             .product-item__img__container {
                 width: 100%;

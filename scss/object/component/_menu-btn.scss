@@ -31,3 +31,14 @@
 .c-menu-btn:hover::after {
     bottom: -3px;
 }
+
+.archive-item-page .l-main .l-header .p-header {
+    .c-menu-btn {
+        color: var.$black;
+        text-shadow: 0.5px 0.5px 1.5px var.$white;
+    }
+    .c-menu-btn::after {
+        background-color: var.$black;
+        box-shadow: 0.3px 0.3px 1.0px var.$white;
+    }
+}

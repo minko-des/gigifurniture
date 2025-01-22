@@ -103,10 +103,10 @@
         }
     }
 
-    .c-link-btn--white {
-        margin: 56px auto 0 auto;
+    .c-link-btn--black {
+        margin: 64px auto 0 auto;
         @include var.breakpoint(tablet) {
-            margin-top: 64px;
+            margin-top: 72px;
         }
     }
 }

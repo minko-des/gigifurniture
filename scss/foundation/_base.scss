@@ -17,14 +17,12 @@ body {
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    line-height: 1.2;
-    // color: var.$brown_txt;
+    line-height: 1.3;
 }
 
 img {
-    //max-width: 100%;  //画面幅より大きく表示させないようにする　archiveページのメインビジュアルに不都合のため削除
     height: auto;
-    vertical-align: middle;  //デフォルトの余白を無くす
+    vertical-align: middle;
 }
 
 h1, h2, h3, h4, h5, h6, p, figure {
@@ -48,10 +46,10 @@ p, figure {
 }
 
 a {
-    text-decoration: none;  //アンダーラインを無くす
-    color: inherit;  //親要素のスタイルを継承する
+    text-decoration: none;
+    color: inherit;
 }
 
 ul, ol {
-    list-style-type: none;  //・を無くす
+    list-style-type: none;
 }

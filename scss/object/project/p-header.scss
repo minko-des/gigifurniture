@@ -4,7 +4,7 @@
 
 .p-header {
     width: 92%;
-    margin: 30px auto;
+    margin: 24px auto;
     display: flex;
     justify-content: space-between;
     @include var.breakpoint(pc) {
@@ -20,10 +20,10 @@
         a {
             display: inline-block;
             width: 100%;
-            
-            .cls-1 {
+
+            svg {
                 fill: var.$white;
-                filter: drop-shadow( 2px 2px 4px var.$black);
+                filter: drop-shadow( 1px 1px 1px var.$black);
             }
         } 
     }
@@ -76,9 +76,9 @@
 }
 
 .archive-item-page .l-main .l-header .p-header {
-    .gigi-logo a .cls-1 {
+    .gigi-logo a svg {
         fill: var.$black;
-        filter: drop-shadow( 2px 2px 4px var.$gray);
+        filter: drop-shadow( 1px 1px 2px var.$gray);
     }
     .header__nav .menu .menu__item {
         color: var.$black;

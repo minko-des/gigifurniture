@@ -30,6 +30,7 @@
         color: var.$white;
         padding-top: 45px;
         margin-left: 5%;
+        white-space: nowrap;
         position: relative;
         @include var.breakpoint(pc) {
             padding-top: 80px;
@@ -55,7 +56,7 @@
             }
 
             p {
-                font-size: clamp(1.6rem, 1.7vw, 2.6rem);
+                font-size: clamp(1.7rem, 1.7vw, 2.6rem);
             }
         }
     }

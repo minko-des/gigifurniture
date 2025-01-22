@@ -37,7 +37,7 @@
         line-height: 0.8;
         text-shadow: 1.0px 1.0px 2.0px var.$black;
         position: absolute;
-        bottom: 40px;
+        bottom: 50px;
         left: 5%;
         @include var.breakpoint(tablet) {
             font-size: 12.0rem;

@@ -168,7 +168,7 @@
 }
 .p-header {
   width: 92%;
-  margin: 30px auto;
+  margin: 24px auto;
   display: flex;
   justify-content: space-between;
 }
@@ -189,9 +189,9 @@
   display: inline-block;
   width: 100%;
 }
-.p-header .gigi-logo a .cls-1 {
+.p-header .gigi-logo a svg {
   fill: #EFF1F7;
-  filter: drop-shadow(2px 2px 4px #14161B);
+  filter: drop-shadow(1px 1px 1px #14161B);
 }
 .p-header .header__nav {
   display: none;
@@ -237,9 +237,9 @@
   text-shadow: 0.5px 3px 0 #14161B;
 }
 
-.archive-item-page .l-main .l-header .p-header .gigi-logo a .cls-1 {
+.archive-item-page .l-main .l-header .p-header .gigi-logo a svg {
   fill: #14161B;
-  filter: drop-shadow(2px 2px 4px #c8cdd0);
+  filter: drop-shadow(1px 1px 2px #c8cdd0);
 }
 .archive-item-page .l-main .l-header .p-header .header__nav .menu .menu__item {
   color: #14161B;

@@ -16,7 +16,7 @@
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr;
-        gap:  70px;
+        gap:  90px;
         @include var.breakpoint(tablet) {
             max-width: 1240px;
             grid-template-columns: 1fr 1fr;
@@ -75,7 +75,6 @@
         }
 
         .p-product-item--type02 {
-
             .product-item__img__container {
                 width: 100%;
                 aspect-ratio: 1.5 / 1;

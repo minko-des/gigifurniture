@@ -2,7 +2,7 @@
 @use "../../foundation/variables" as var;
 
 
-.p-archive__content {
+.p-productcase__content {
     width: 100%;
     margin-top: 50px;
     position: relative;
@@ -26,10 +26,10 @@
             width: 80%;
         }
 
-        .p-product-item--type01,.p-product-item--type02 {
+        .p-productcase-item {
             width: 100%;
 
-            .product-item__img {
+            .productcase-item__img {
                 width: 100%;
                 aspect-ratio: 1.3 / 1;
 
@@ -40,7 +40,7 @@
                 }
             }
 
-            .product-item__caption {
+            .productcase-item__caption {
                 color: var.$white;
                 margin-top: 16px;
                 border-left: 1px solid var.$white;

@@ -36,11 +36,11 @@
 @use "object/project/copyright";
 @use "object/project/swiper-area";
 @use "object/project/sidebar";
-@use "object/project/archive__heading";
-@use "object/project/archive__content";
+@use "object/project/productcase__heading";
+@use "object/project/productcase__content";
 @use "object/project/pagination";
-@use "object/project/archive-item__main-visual";
-@use "object/project/archive-item__content";
+@use "object/project/items__main-visual";
+@use "object/project/items__content";
 
 //object_utility
 @use "object/utility/active-animation";

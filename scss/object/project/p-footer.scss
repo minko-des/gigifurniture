@@ -26,12 +26,12 @@
             margin-top: 64px;
         }
 
-        ul {
+        .menu {
             display: flex;
             flex-direction: column;
             align-items: center;
 
-            .nav-menu {
+            .menu-item {
                 font-family: "Teko", serif;
                 font-weight: 500;
                 font-size: 2.0rem;

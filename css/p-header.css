@@ -207,14 +207,14 @@
   display: flex;
   justify-content: space-between;
 }
-.p-header .header__nav .menu .menu__item {
+.p-header .header__nav .menu .menu-item {
   font-family: "Teko", serif;
   font-size: 2.1rem;
   font-weight: 500;
   color: #EFF1F7;
   transition: 0.3s;
 }
-.p-header .header__nav .menu .menu__item a {
+.p-header .header__nav .menu .menu-item a {
   text-shadow: 0.5px 0.5px 0 #14161B;
   letter-spacing: 0.1rem;
   transition: 0.2s;

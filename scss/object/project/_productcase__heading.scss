@@ -2,7 +2,7 @@
 @use "../../foundation/variables" as var;
 
 
-.p-archive__heading {
+.p-productcase__heading {
     margin: 130px auto 0 auto;
     display: flex;
     flex-direction: column;
@@ -28,7 +28,7 @@
     }
 }
 
-.l-wrapper.archive-page .l-main .bg-text {
+.bg-text { //.page-id-75 .l-wrapper .l-main 
     font-family: "Oswald", serif;
     font-size: clamp( 7.5rem, 20.0vw, 26.0rem);
     color: var.$white;

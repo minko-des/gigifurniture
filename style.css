@@ -1,0 +1,37 @@
+/*
+  Theme Name: gigifurniture
+  Description: オーダーメイド家具やオリジナルアウトドアグッズを製作、提供しています。
+  Version: 1.0.0
+  Theme URI:
+  Author: minko
+  Author URI:
+  Tags: custom-background, custom-logo
+  License: GPL
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+  Copyright (C) 2024 minko. All rights reserved.
+  Text Domain: gigifurniture
+  Tested up to: 6.6
+  Requires PHP: 8.1
+*/
+
+
+/* スクリーンリーダー用 */
+.screen-reader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+  .screen-reader-text:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }

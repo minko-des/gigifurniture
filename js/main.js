@@ -1,60 +1,29 @@
-
-// $(document).ready(function() {
 document.addEventListener("DOMContentLoaded", () => {
 
 // メインビジュアルの画像差し替えアニメーション
-    const images = [
-        "./images/mainvisual01.jpg",
-        "./images/mainvisual02.jpg",
-        "./images/mainvisual03.jpg",
-        "./images/mainvisual04.jpg",
-        // "./images/mainvisual05.jpeg",
-    ];
-    const imgElement = document.querySelector(".main-visual__img");
+    const images = document.querySelectorAll(".main-visual__img");
     let currentIndex = 0;
-
     setInterval(() => {
+        // 現在の画像を非表示にする
+        images[currentIndex].classList.add("hidden");
+        // 次の画像を表示する
         currentIndex = (currentIndex + 1) % images.length;
-        imgElement.src = images[currentIndex];
+        images[currentIndex].classList.remove("hidden");
     }, 8000);
-
-
-    // アイテムのスライダー
-    const mySwiper = new Swiper('.swiper', {
-        // Optional parameters
-        loop: true,
-        slidesPerView: 'auto',
-        spaceBetween: "5%",
-        centeredSlides: true, //アクティブなスライドを中央に配置
-
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
 
 
     // 自動スライダー、無限ループ関数
     const sliderContainer = document.querySelector(".slider-container");
     const sliderItem = document.querySelector(".logo-wrap");
-    // 画面幅を取得
-    const screenWidth = window.innerWidth;
+    const screenWidth = window.innerWidth; // 画面幅を取得
     // アイテムを複製して画面幅を埋める
     let itemWidth = sliderItem.offsetWidth; //要素幅を取得
     const itemsNeeded = Math.ceil(screenWidth / itemWidth) + 1; // 画面幅を超えるために+1
-
+    
     for (let i = 0; i < itemsNeeded; i++) {
         const clone = sliderItem.cloneNode(true); //要素の複製
         sliderContainer.appendChild(clone); //複製した要素（clone）をsliderContainerに追加
     }
-
     let currentPosition = 0;
 
     // スライド関数
@@ -98,6 +67,27 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.classList.remove("u-noScroll");
         }
     }
+
+
+    // アイテムのスライダー
+    const mySwiper = new Swiper('.swiper', {
+        // Optional parameters
+        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: "5%",
+        centeredSlides: true, //アクティブなスライドを中央に配置
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
 });
 
 

@@ -10,6 +10,7 @@
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    z-index: 11;
     @include var.breakpoint(tablet) {
         height: 380px;
         margin-top: 64px;

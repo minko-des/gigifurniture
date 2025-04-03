@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<!-- <?php get_header(); ?>
 
             <section class="p-archive__heading">
                 <h1>Product Case</h1>
@@ -222,4 +222,4 @@
     </div>
     <script src="./js/swiper-bundle.min.js"></script>
 </body>
-</html>
+</html> -->

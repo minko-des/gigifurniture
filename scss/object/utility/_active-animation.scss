@@ -2,18 +2,18 @@
 @use "../../foundation/variables" as var;
 
 
-.u-active--slideInFromUnder {
+.fadeIn.active {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.slideInFromUnder.active {
     animation: slideInFromUnder 1s ease-in-out forwards;
 }
 
-.u-active--slideInFromLeft {
+.slideInFromLeft.active {
     animation: slideInFromLeft 1s ease-in-out forwards 0.1s;
 }
 
-.u-active--slideInFromRight {
+.slideInFromRight.active {
     animation: slideInFromRight 1s ease-in-out forwards;
-}
-
-.u-active--fadeIn {
-    animation: fadeIn 1.5s ease-in-out forwards;
 }

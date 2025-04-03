@@ -36,7 +36,7 @@
             padding-top: 80px;
         }
 
-        h2 {
+        .c-section__title {
             font-size: clamp(6.0rem, 8.5vw, 12rem);
         }
 
@@ -55,7 +55,7 @@
                 }
             }
 
-            p {
+            h2 {
                 font-size: clamp(1.7rem, 1.7vw, 2.6rem);
             }
         }

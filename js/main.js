@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // メニューページ表示非表示関数
     const menuBtn = document.querySelector(".c-menu-btn");
     const sideBar = document.querySelector(".p-sidebar");
+    const menuItems = document.querySelectorAll(".menu__item");
 
     menuBtn.addEventListener("click" , () => {
         const currentText = menuBtn.textContent;
@@ -58,6 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
         sideBar.classList.toggle("menuOpen");
 
         toggleBodyScroll();
+    });
+
+    menuItems.forEach(item => {
+        item.addEventListener("click" ,() => {
+            sideBar.classList.remove("menuOpen");
+            toggleBodyScroll();
+        });
     });
 
     function toggleBodyScroll() {
@@ -87,29 +95,20 @@ document.addEventListener("DOMContentLoaded", () => {
             prevEl: '.swiper-button-prev',
         },
     });
+    
 
+    // スクロールによるアニメーション発火
+    window.addEventListener('scroll', function () {
+        const elements = document.querySelectorAll('.slideInFromUnder, .slideInFromLeft, .slideInFromRight, .fadeIn');
+        
+        elements.forEach(function (el) {
+            const rect = el.getBoundingClientRect();
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            
+            if (rect.top < windowHeight) {
+                el.classList.add('active');
+            }
+        });
+    });
+    
 });
-
-
-//     // アニメーション、スクロール位置監視して要素が画面に表れたら開始する
-//     $(window).on('scroll', function() {
-//         $('.slideInFromUnder, .slideInFromLeft, .slideInFromRight, .fadeIn').each(function() {
-//             // 要素の上端位置
-//             let targetPosition = $(this).offset().top;
-//             // 画面のスクロール位置と画面高さを取得
-//             let scrollPosition = $(window).scrollTop();
-//             let windowHight = $(window).height();
-//             // 要素が画面内に入ったらクラスごとに各クラスを追加
-//             if (scrollPosition + windowHight > targetPosition) {
-//                 if ($(this).hasClass('slideInFromUnder')) {
-//                     $(this).addClass('u-active--slideInFromUnder');
-//                 } else if ($(this).hasClass('slideInFromLeft')) {
-//                     $(this).addClass('u-active--slideInFromLeft');
-//                 } else if ($(this).hasClass("slideInFromRight")) {
-//                     $(this).addClass('u-active--slideInFromRight');
-//                 } else if ($(this).hasClass("fadeIn")) {
-//                     $(this).addClass('u-active--fadeIn');
-//                 }
-//             }
-//         })
-//     })

@@ -21,6 +21,8 @@
 @use "object/component/square-mark";
 @use "object/component/slider-btn";
 @use "object/component/insta-icon";
+@use "object/component/gigi-logo";
+@use "object/component/gigifurniture-logo";
 
 //object_project
 @use "object/project/catch";
@@ -45,3 +47,4 @@
 //object_utility
 @use "object/utility/active-animation";
 @use "object/utility/noScroll";
+@use "object/utility/visually-hidden";

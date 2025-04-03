@@ -190,6 +190,9 @@
 }
 .p-footer .footer_nav {
   margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 1100px) {
   .p-footer .footer_nav {
@@ -209,36 +212,12 @@
   letter-spacing: 0.1rem;
   margin-bottom: 30px;
 }
-.p-footer .footer_nav .menu .c-insta-icon {
+.p-footer .footer_nav .c-insta-icon {
   width: 24px;
   height: 24px;
 }
-.p-footer .gigifurniture-logo {
-  width: 104px;
-  margin-top: 64px;
-  transition: 0.3s;
-}
-@media (min-width: 1100px) {
-  .p-footer .gigifurniture-logo {
-    width: 134px;
-    margin-top: 80px;
-  }
-}
-.p-footer .gigifurniture-logo a {
-  display: inline-block;
-  width: 100%;
-}
-.p-footer .gigifurniture-logo a svg .logo-group {
-  fill: #EFF1F7;
-}
-.p-footer .gigifurniture-logo a svg .logo-group .logo_furniture .logo_furniture_text-wrap .logo_furniture_text {
-  fill: #242526;
-}
-.p-footer .footer_nav ul .nav-menu:hover {
+.p-footer .footer_nav ul .menu-item:hover {
   transform: translateY(-2px);
   transition: 0.3s;
-}
-.p-footer .gigifurniture-logo:hover {
-  opacity: 0.6;
 }
 /*# sourceMappingURL=p-footer.css.map */

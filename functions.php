@@ -44,19 +44,40 @@ function custom_theme_support() {
             'content'     => '<!-- wp:paragraph --><p>' . __( 'This is a custom block pattern.', 'gigifurniture' ) . '</p><!-- /wp:paragraph -->', // パターンの内容);
         )
     );
-    register_nav_menus( array(       //カスタムメニューの有効化（管理画面の外観-メニューで編集できるようになる）
+    register_nav_menus( array(
         'header-nav' => esc_html__( 'header navigation', 'gigifurniture' ),
         'sidebar-nav' => esc_html__( 'sidebar navigation', 'gigifurniture' ),
-        'footer-nav' => esc_html__( 'footer navigation', 'gigifurniture' ), //( 管理画面でのメニュー名 ,翻訳ファイル参照)
-        // ↑ 識別キー                    // ↑ 翻訳可能な名前
+        'footer-nav' => esc_html__( 'footer navigation', 'gigifurniture' ),
     ) );
 }
 add_action( 'after_setup_theme', 'custom_theme_support' );
 
 
+// ナビゲーションメニューの構造カスタム
+class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
+    // 開始タグ（<li>）
+    function start_el(&$output, $item, $depth = 0, $args = [], $id = 0) {
+        $title = esc_html($item->title);
+        $description = esc_html($item->description);
+        $url = esc_url($item->url);
+
+        $output .= '<li class="menu__item">';
+        $output .= '<a href="' . $url . '">';
+        $output .= '<h2 class="menu__title">' . $title . '</h2>';
+        if (!empty($description)) {
+            $output .= '<div class="menu__lead">';
+            $output .= '<p class="c-square-mark"></p>';
+            $output .= '<p>' . $description . '</p>';
+            $output .= '</div>';
+        }
+        $output .= '</a>';
+        $output .= '</li>';
+    }
+}
+
+
 function readScript() {
-    //googleフォントの読み込み  
-    wp_enqueue_style( 'google-fonts_Big+Shoulders+Stencil+Text', 'https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@100..900&display=swap', array(), ''); //バージョンパラメータを null に設定することで、WordPressは自動的にクエリパラメータを付けないようにします
+    wp_enqueue_style( 'google-fonts_Big+Shoulders+Stencil+Text', 'https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@100..900&display=swap', array(), '');
     wp_enqueue_style( 'google-fonts_Noto+Sans+JP', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap', array(), '');
     wp_enqueue_style( 'google-fonts_Fuzzy+Bubbles', 'https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap', array(), '');
     wp_enqueue_style( 'google-fonts_Oswald', 'https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap', array(), '');
@@ -107,7 +128,6 @@ function my_theme_widgets_init() {
 add_action( 'widgets_init', 'my_theme_widgets_init' );
 
 
-
 function my_custom_post_type() {
     $labels = array(
         'name'               => 'アイテム一覧',
@@ -131,9 +151,14 @@ function my_custom_post_type() {
         'menu_icon'          => 'dashicons-admin-post',
         'supports'           => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
         'rewrite'            => array('slug' => 'item'),
+        'show_in_rest' => true, // ブロックエディターを有効
     );
 
     register_post_type('item', $args);
 }
 add_action('init', 'my_custom_post_type');
+
+
+add_filter('show_admin_bar', '__return_false');
+
 ?>

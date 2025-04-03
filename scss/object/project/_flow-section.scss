@@ -12,18 +12,21 @@
 
     .flow-section__title {
         font-family: "Noto Sans JP", sans-serif;
-        text-align: center;
         color: var.$black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
 
-        h3 {
+        .flow__heading {
             font-size: clamp(5.0rem, 5.0vw, 7.0rem);
             font-weight: 500;
         }
 
-        p {
+        .flow__lead {
             font-size: clamp(2.2rem, 2.2vw, 3.2rem);
             font-weight: 500;
-            margin: 12px auto 0 auto;
+            margin: 0 auto;
             @include var.breakpoint(pc) {
                 margin-top: 24px;
             }

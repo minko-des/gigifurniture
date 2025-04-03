@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.c-gigi-logo {
+    width: 72px;
+    transition: 0.3s;
+    @include var.breakpoint(pc) {
+        width: 124px;
+    }
+
+    a {
+        display: inline-block;
+        width: 100%;
+        
+        svg {
+            fill: var.$white;
+            filter: drop-shadow( 1px 1px 1px var.$black);
+        }
+    } 
+}
+
+.page-id-79 .l-header .p-header {
+    .c-gigi-logo a svg {
+        fill: var.$black;
+        filter: drop-shadow( 1px 1px 1px var.$gray);
+    }
+}
+
+.c-gigi-logo:hover {
+    opacity: 0.6;
+}

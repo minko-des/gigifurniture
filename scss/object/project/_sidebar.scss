@@ -12,32 +12,34 @@
     z-index: 10;
     transition: 0.3s;
 
-    .menu {
-        margin-top: 160px;
-        margin-left: 7%;
+    .sidebar_nav {
+        .menu {
+            margin-top: 160px;
+            margin-left: 7%;
 
-        .menu__item {
-            margin-bottom: 45px;
-            color: var.$white;
+            .menu__item {
+                margin-bottom: 45px;
+                color: var.$white;
 
-            .menu__title {
-                font-family: "Teko", serif;
-                font-size: 4.0rem;
-                font-weight: 600;
-                letter-spacing: 0.1rem;
-                transition: 0.3s;
-            }
-            
-            .menu__lead {
-                font-family: "Noto Sans JP", sans-serif;
-                font-size: 1.6rem;
-                margin-left: 12px;
-                display: flex;
-                align-items: center;
+                .menu__title {
+                    font-family: "Teko", serif;
+                    font-size: 4.0rem;
+                    font-weight: 600;
+                    letter-spacing: 0.1rem;
+                    transition: 0.3s;
+                }
+                
+                .menu__lead {
+                    font-family: "Noto Sans JP", sans-serif;
+                    font-size: 1.6rem;
+                    margin-left: 12px;
+                    display: flex;
+                    align-items: center;
 
-                .c-square-mark {
-                    margin-right: 10px;
-                    margin-top: 3px;
+                    .c-square-mark {
+                        margin-right: 10px;
+                        margin-top: 3px;
+                    }
                 }
             }
         }

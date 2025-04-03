@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@use "../../foundation/variables" as var;
+
+
+.c-gigifurniture-logo {
+    width: 104px;
+    margin-top: 64px;
+    transition: 0.3s;
+    @include var.breakpoint(pc) {
+        width: 134px;
+        margin-top: 80px;
+    }
+
+    a {
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+.c-gigifurniture-logo:hover {
+    opacity: 0.6;
+}

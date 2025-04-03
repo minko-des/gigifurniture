@@ -24,7 +24,7 @@
             padding-bottom: 60px;
         }
 
-        h1 {
+        p {
             font-family: "Big Shoulders Stencil Text", serif;
             font-size: clamp( 4.8rem, 10.0vw, 10.0rem);
             font-weight: 700;
@@ -41,7 +41,7 @@
             }
         }
 
-        p {
+        h1 {
             font-size: clamp( 1.8rem, 1.7vw, 2.4rem);
             font-weight: 500;
             line-height: 1.4;
@@ -50,6 +50,9 @@
                 width: 60%;
                 margin: 90px 0 0 25%;
             }
+        }
+        p,h1 {
+            animation: fadeIn 1.5s ease-in-out forwards;
         }
     }
 
@@ -81,6 +84,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            animation: fadeIn 1s ease-in-out forwards;
             @include var.breakpoint(pc) {
                 max-width: 1000px;
             }
@@ -103,6 +107,7 @@
     .notes {
         line-height: 1.4;
         margin: 20px 7%;
+        animation: fadeIn 1s ease-in-out forwards;
         @include var.breakpoint(pc) {
             margin: 0;
             position: absolute;

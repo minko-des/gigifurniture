@@ -1,27 +1,25 @@
-<div class="p-swiper-area">
+<div class="p-swiper-area slideInFromUnder">
     <div class="swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="item"><img src="./images_item/item_magazinerack1.jpeg" alt=""></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="item"><img src="./images_item/item_dripper.JPG" alt=""></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="item"><img src="./images_item/item_tissue.JPG" alt=""></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="item"><img src="./images_item/item_incensestand.JPG" alt=""></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="item"><img src="./images_item/item_keyholder.JPG" alt=""></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="item"><img src="./images_item/item_nandemorack1.JPG" alt=""></div>
-            </div>
-            <div class="swiper-slide">
-                <div class="item"><img src="./images_item/item_squarepot1.JPG" alt=""></div>
-            </div>
+            <?php
+            $args = array(
+                'post_type'     => 'item',
+                'post_per_page' => 10,
+            );
+
+            $custom_query = new WP_Query($args);
+
+            if ($custom_query->have_posts()) :
+                while ($custom_query->have_posts()) : $custom_query->the_post();
+                get_template_part('template-parts/swiper-slide');
+                endwhile;
+                wp_reset_postdata();
+            else :
+                echo "<p>記事がありません。</p>";
+            endif;
+            
+            wp_reset_postdata();
+            ?>
         </div>
     </div>
     <div class="swiper-pagination"></div>

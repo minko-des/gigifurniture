@@ -567,6 +567,54 @@ ul, ol {
   left: 0;
   z-index: 90;
 }
+.l-header .bg-color {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 1;
+  transition: all 0.8s;
+  display: flex;
+}
+@media (min-width: 768px) {
+  .l-header .bg-color {
+    display: flex;
+  }
+}
+.l-header .bg-color.hidden {
+  top: -100%;
+  opacity: 0;
+}
+.l-header .bg-color .logo-bg {
+  width: 72px;
+  height: 104px;
+  min-width: 74px;
+  padding-left: 4.2vw;
+  padding-right: 4.2vw;
+  box-sizing: content-box;
+  background-color: #14161B;
+  border-radius: 0 0 8px 0;
+}
+@media (min-width: 1100px) {
+  .l-header .bg-color .logo-bg {
+    width: 124px;
+    height: 180px;
+  }
+}
+.l-header .bg-color .nav-bg {
+  width: 100%;
+  height: 74px;
+  background-color: #14161B;
+}
+@media (min-width: 1100px) {
+  .l-header .bg-color .nav-bg {
+    height: 92px;
+  }
+}
+
+.page-id-79 .l-header .bg-color .logo-bg,
+.page-id-79 .l-header .bg-color .nav-bg {
+  background-color: #c8cdd0;
+}
 
 .c-link-btn--black, .c-link-btn--white {
   width: 300px;
@@ -709,6 +757,24 @@ ul, ol {
   letter-spacing: 0.2rem;
 }
 
+.page-id-79 .c-contact-btn--small {
+  background-color: #c8cdd0;
+  border: 1.5px solid #14161B;
+}
+.page-id-79 .c-contact-btn--small a {
+  color: #14161B;
+}
+
+.page-id-79 .c-contact-btn--small:hover {
+  background-color: #14161B;
+  border: 1px solid #c8cdd0;
+}
+.page-id-79 .c-contact-btn--small:hover a {
+  font-weight: 500;
+  color: #c8cdd0;
+  letter-spacing: 0.2rem;
+}
+
 .c-contact-btn--large {
   width: 300px;
   height: 60px;
@@ -790,14 +856,6 @@ ul, ol {
   right: 46px;
 }
 
-.page-id-79 .c-contact-btn--small {
-  background-color: #c8cdd0;
-  border: 1.5px solid #14161B;
-}
-.page-id-79 .c-contact-btn--small a {
-  color: #14161B;
-}
-
 .c-menu-btn {
   font-family: "Teko", serif;
   font-size: 2.4rem;
@@ -833,11 +891,11 @@ ul, ol {
   bottom: -3px;
 }
 
-.archive-item-page .l-main .l-header .p-header .c-menu-btn {
+.page-id-79 .l-main .l-header .p-header .c-menu-btn {
   color: #14161B;
   text-shadow: 0.5px 0.5px 1.5px #EFF1F7;
 }
-.archive-item-page .l-main .l-header .p-header .c-menu-btn::after {
+.page-id-79 .l-main .l-header .p-header .c-menu-btn::after {
   background-color: #14161B;
   box-shadow: 0.3px 0.3px 1px #EFF1F7;
 }
@@ -936,12 +994,12 @@ ul, ol {
 }
 .c-gigi-logo a svg {
   fill: #EFF1F7;
-  filter: drop-shadow(1px 1px 1px #14161B);
+  filter: drop-shadow(1px 1px 0 #14161B);
 }
 
 .page-id-79 .l-header .p-header .c-gigi-logo a svg {
   fill: #14161B;
-  filter: drop-shadow(1px 1px 1px #c8cdd0);
+  filter: drop-shadow(1px 1px 0 #c8cdd0);
 }
 
 .c-gigi-logo:hover {
@@ -1131,8 +1189,6 @@ ul, ol {
   font-weight: 400;
   color: #EFF1F7;
   letter-spacing: 0.05rem;
-  -webkit-animation: fadeIn 1.5s ease-in-out forwards;
-          animation: fadeIn 1.5s ease-in-out forwards;
 }
 .p-main-visual .catch-copy {
   font-size: 10rem;
@@ -1141,6 +1197,8 @@ ul, ol {
   position: absolute;
   bottom: 50px;
   left: 5%;
+  -webkit-animation: slideInFromRight 0.5s ease-in-out forwards;
+          animation: slideInFromRight 0.5s ease-in-out forwards;
 }
 @media (min-width: 768px) {
   .p-main-visual .catch-copy {
@@ -1161,12 +1219,22 @@ ul, ol {
     display: inline;
   }
 }
+.p-main-visual .catch-copy span:first-child {
+  -webkit-animation: slideInFromRight 1s ease-in-out forwards;
+          animation: slideInFromRight 1s ease-in-out forwards;
+}
+.p-main-visual .catch-copy span:last-child {
+  -webkit-animation: slideInFromRight 1.5s ease-in-out forwards;
+          animation: slideInFromRight 1.5s ease-in-out forwards;
+}
 .p-main-visual .concept {
   font-size: 2.6rem;
   text-align: end;
   position: absolute;
   top: 160px;
   right: 5%;
+  -webkit-animation: slideInFromLeft 1.5s ease-in-out forwards;
+          animation: slideInFromLeft 1.5s ease-in-out forwards;
 }
 @media (min-width: 1100px) {
   .p-main-visual .concept {
@@ -1176,6 +1244,8 @@ ul, ol {
     left: 5%;
     top: auto;
     right: auto;
+    -webkit-animation: fadeIn 1.5s ease-in-out forwards;
+            animation: fadeIn 1.5s ease-in-out forwards;
   }
 }
 .p-main-visual .concept span {
@@ -1490,6 +1560,7 @@ ul, ol {
 }
 .p-header .header__nav {
   display: none;
+  z-index: 1;
 }
 @media (min-width: 768px) {
   .p-header .header__nav {
@@ -1509,6 +1580,11 @@ ul, ol {
   color: #EFF1F7;
   transition: 0.3s;
 }
+@media (min-width: 1100px) {
+  .p-header .header__nav .menu .menu-item {
+    font-size: 2.3rem;
+  }
+}
 .p-header .header__nav .menu .menu-item a {
   text-shadow: 0.5px 0.5px 0 #14161B;
   letter-spacing: 0.1rem;
@@ -1518,6 +1594,7 @@ ul, ol {
   width: 164px;
   margin-top: 10px;
   display: none;
+  z-index: 1;
 }
 @media (min-width: 768px) {
   .p-header .link-unit {
@@ -1528,15 +1605,12 @@ ul, ol {
 .p-header .header__nav .menu .menu-item:hover {
   transform: translateY(-2px);
 }
-.p-header .header__nav .menu .menu-item:hover a {
-  text-shadow: 0.5px 3px 0 #14161B;
-}
 
 .page-id-79 .l-header .p-header .header__nav .menu .menu-item {
   color: #14161B;
 }
 .page-id-79 .l-header .p-header .header__nav .menu .menu-item a {
-  text-shadow: 0.5px 0.5px 0 #c8cdd0;
+  text-shadow: none;
 }
 
 .p-flow-section {
@@ -1568,7 +1642,7 @@ ul, ol {
 }
 @media (min-width: 1100px) {
   .p-flow-section .flow-section__title .flow__lead {
-    margin-top: 24px;
+    margin-top: 18px;
   }
 }
 .p-flow-section .flow-section__content {
@@ -2060,7 +2134,7 @@ ul, ol {
   position: fixed;
   top: 0;
   right: -100%;
-  z-index: 10;
+  z-index: 12;
   transition: 0.3s;
 }
 .p-sidebar .sidebar_nav .menu {
@@ -2535,6 +2609,49 @@ ul, ol {
 }
 .p-items__content .originalitem-wrap .originalitem-card__img__container:hover .originalitem-card__img01 img {
   transform: scale(1.1);
+}
+
+.p-page404 {
+  margin: 150px auto 0 auto;
+  padding-bottom: 120px;
+  text-align: center;
+}
+.p-page404__title {
+  font-weight: 700;
+}
+.p-page404__title h2 {
+  font-family: "Big Shoulders Stencil Text", serif;
+  font-size: clamp(6rem, 10vw, 12rem);
+}
+.p-page404__title p {
+  font-size: 2.4rem;
+}
+.p-page404__text {
+  margin-top: 50px;
+  padding: 0 6px;
+}
+.p-page404__text p {
+  line-height: 1.4;
+}
+.p-page404__btn {
+  width: 300px;
+  height: 60px;
+  margin: 60px auto 0 auto;
+  background-color: #14161B;
+  border: 1px solid #EFF1F7;
+  transition: all 0.2s;
+  color: #EFF1F7;
+}
+.p-page404__btn a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+}
+.p-page404__btn:hover {
+  background-color: rgba(239, 241, 247, 0.3);
+  color: #14161B;
+  border-color: #14161B;
 }
 
 .fadeIn.active {

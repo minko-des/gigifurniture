@@ -22,13 +22,29 @@
         transition: all 0.4s;
     }
 }
-
 .c-contact-btn--small:hover {
     background-color: rgba(239, 241, 247, 0.5);
     border: 1px solid var.$black;
     a {
         font-weight: 500;
         color: var.$black;
+        letter-spacing: 0.2rem;
+    }
+}
+
+.page-id-79 .c-contact-btn--small {
+    background-color: var.$gray;
+    border: 1.5px solid var.$black;
+    a {
+        color: var.$black;
+    }
+}
+.page-id-79 .c-contact-btn--small:hover {
+    background-color: var.$black;
+    border: 1px solid var.$gray;
+    a {
+        font-weight: 500;
+        color: var.$gray;
         letter-spacing: 0.2rem;
     }
 }
@@ -112,13 +128,5 @@
             height: 1.3px;
             right: 46px;
         }
-    }
-}
-
-.page-id-79 .c-contact-btn--small {
-    background-color: var.$gray;
-    border: 1.5px solid var.$black;
-    a {
-        color: var.$black;
     }
 }

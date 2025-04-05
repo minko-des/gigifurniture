@@ -2,11 +2,7 @@
 
     <section class="p-productcase__heading">
         <p>Product Case</p>
-        <h1>
-            <span aria-hidden="true">ー   </span>
-            制作事例
-            <span aria-hidden="true">   ー</span>
-        </h1>
+        <h1><span aria-hidden="true">ー   </span>制作事例<span aria-hidden="true">   ー</span></h1>
     </section>
 
     <p class="bg-text" aria-hidden="true">gigifurniture</p>
@@ -17,7 +13,7 @@
             $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 
             $args = array(
-                'post_type' => 'post', // ← 通常の投稿タイプ、 固定ページにループ処理を行う場合はカスタムクエリになるので指定が必要
+                'post_type' => 'post',
                 'paged'     => $paged,
                 'posts_per_page' => 6,
             );

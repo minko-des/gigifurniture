@@ -1,7 +1,7 @@
-=== minko-portfolio ===
+=== gigifurniture ===
 Contributors: minko
-Tags: responsive, portfolio
-Requires at least: 6.6
+Tags: responsive
+Requires at least: 6.7
 Tested up to: 6.7	
 Version: 1.0
 License: GPL

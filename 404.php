@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
     <div class="p-page404">
-        <div class="p-page404__title c-heading--inter">
-            <h1>404</h1>
+        <div class="p-page404__title">
+            <h2>404</h2>
             <p>page not found</p>
         </div>
         <div class="p-page404__text">
@@ -11,7 +11,9 @@
             </p>
         </div>
         <div class="p-page404__btn">
-            <a href="<?php echo esc_url( home_url('/') ); ?>">TOPページへ戻る</a>
+            <a href="<?php echo esc_url( home_url('/') ); ?>">
+                TOPページへ戻る
+            </a>
         </div>
     </div>
         

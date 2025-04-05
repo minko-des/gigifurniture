@@ -34,7 +34,6 @@
         font-weight: 400;
         color: var.$white;
         letter-spacing: 0.05rem;
-        animation: fadeIn 1.5s ease-in-out forwards;
     }
 
     .catch-copy {
@@ -44,6 +43,7 @@
         position: absolute;
         bottom: 50px;
         left: 5%;
+        animation: slideInFromRight 0.5s ease-in-out forwards;
         @include var.breakpoint(tablet) {
             font-size: 12.0rem;
         }
@@ -58,6 +58,13 @@
                 display: inline;
             }
         }
+
+        span:first-child {
+            animation: slideInFromRight 1.0s ease-in-out forwards;
+        }
+        span:last-child {
+            animation: slideInFromRight 1.5s ease-in-out forwards;
+        }
     }
 
     .concept {
@@ -66,14 +73,15 @@
         position: absolute;
         top: 160px;
         right: 5%;
+        animation: slideInFromLeft 1.5s ease-in-out forwards;
         @include var.breakpoint(pc) {
             font-size: 4.0rem;
             text-align: start;
-
             bottom: 60px;
             left: 5%;
             top: auto;
             right: auto;
+            animation: fadeIn 1.5s ease-in-out forwards;
         }
 
         span {

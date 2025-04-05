@@ -15,7 +15,7 @@
         
         svg {
             fill: var.$white;
-            filter: drop-shadow( 1px 1px 1px var.$black);
+            filter: drop-shadow( 1px 1px 0 var.$black);
         }
     } 
 }
@@ -23,7 +23,7 @@
 .page-id-79 .l-header .p-header {
     .c-gigi-logo a svg {
         fill: var.$black;
-        filter: drop-shadow( 1px 1px 1px var.$gray);
+        filter: drop-shadow( 1px 1px 0 var.$gray);
     }
 }
 

@@ -1,15 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-// メインビジュアルの画像差し替えアニメーション
+    // メインビジュアルの画像差し替えアニメーション
     const images = document.querySelectorAll(".main-visual__img");
-    let currentIndex = 0;
-    setInterval(() => {
-        // 現在の画像を非表示にする
-        images[currentIndex].classList.add("hidden");
-        // 次の画像を表示する
-        currentIndex = (currentIndex + 1) % images.length;
-        images[currentIndex].classList.remove("hidden");
-    }, 8000);
+
+    if (images.length > 0) {
+        let currentIndex = 0;
+        setInterval(() => {
+            // 現在の画像を非表示にする
+            images[currentIndex].classList.add("hidden");
+            // 次の画像を表示する
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.remove("hidden");
+        }, 8000);
+    }
+
+
+    //ヘッダーのバックグラウンドカラーの表示
+    const bgColor = document.querySelector(".bg-color");
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY === 0) {
+        bgColor.classList.add('hidden');
+        } else {
+            bgColor.classList.remove('hidden');
+        }
+    });
+
+    if (window.scrollY === 0) {
+        bgColor.classList.add('hidden');
+    }
 
 
     // 自動スライダー、無限ループ関数
@@ -28,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // スライド関数
     function slide() {
-        currentPosition -= 0.3; // 1フレームあたりの移動量
+        currentPosition -= 0.8; // 1フレームあたりの移動量
         if (Math.abs(currentPosition) >= itemWidth) {
             currentPosition = 0; // リセット
             // 先頭のアイテムを末尾に移動
@@ -45,6 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
         sliderContainer.style.transform = `translateX(0px)`; // 位置を初期化
     });
     
+    console.log("itemWidth:", itemWidth); // 正しく 1082px とか出てる？
+
     slide();
 
 

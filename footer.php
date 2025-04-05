@@ -25,8 +25,6 @@
             </footer>
         </main>
     </div>
-    <script src="./js/swiper-bundle.min.js"></script>
-
     <?php wp_footer(); ?>
 </body>
 </html>

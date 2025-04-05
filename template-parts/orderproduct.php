@@ -9,13 +9,13 @@
     </div>
     <div class="img-wrap fadeIn">
         <div class="img01">
-            <img class="img" src="<?php echo esc_url(get_theme_file_uri('/images/oderproduct01.jpg') ); ?>" alt="オーダーメイド家具の写真1">
+            <img class="img" src="<?php echo esc_url(get_theme_file_uri('/images/oderproduct01.jpg') ); ?>" alt="オーダーメイド家具の写真1" loading="lazy">
         </div>
         <div class="img02">
-            <img class="img" src="<?php echo esc_url(get_theme_file_uri('/images/oderproduct02.jpg') ); ?>" alt="オーダーメイド家具の写真2">
+            <img class="img" src="<?php echo esc_url(get_theme_file_uri('/images/oderproduct02.jpg') ); ?>" alt="オーダーメイド家具の写真2" loading="lazy">
         </div>
         <div class="img03">
-            <img class="img" src="<?php echo esc_url(get_theme_file_uri('/images/oderproduct03.jpg') ); ?>" alt="オーダーメイド家具の写真3">
+            <img class="img" src="<?php echo esc_url(get_theme_file_uri('/images/oderproduct03.jpg') ); ?>" alt="オーダーメイド家具の写真3" loading="lazy">
             <p class="name fadeIn" aria-hidden="true">gigi furniture</p>
         </div>
     </div>
@@ -41,7 +41,7 @@
                 <p class="flow-number">01</p>
                 <figure>
                     <div class="flow-img">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/images/flow01.jpeg') ); ?>" alt="打ち合わせのイメージ画像">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/images/flow01.jpeg') ); ?>" alt="打ち合わせのイメージ画像" loading="lazy">
                     </div>
                     <figcaption>
                         <h4>仕様の打合せ</h4>
@@ -54,7 +54,7 @@
                 <p class="flow-number">02</p>
                 <figure>
                     <div class="flow-img">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/images/flow02.jpeg') ); ?>" alt="設計のイメージ画像">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/images/flow02.jpeg') ); ?>" alt="設計のイメージ画像" loading="lazy">
                     </div>
                     <figcaption>
                         <h4>企画・設計</h4>
@@ -67,7 +67,7 @@
                 <p class="flow-number">03</p>
                 <figure>
                     <div class="flow-img">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/images/flow03.JPG') ); ?>" alt="製作のイメージ画像">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/images/flow03.JPG') ); ?>" alt="製作のイメージ画像" loading="lazy">
                     </div>
                     <figcaption>
                         <h4>製作</h4>
@@ -80,7 +80,7 @@
                 <p class="flow-number">04</p>
                 <figure>
                     <div class="flow-img">
-                        <img src="<?php echo esc_url(get_theme_file_uri('/images/flow04.jpeg') ); ?>" alt="納品のイメージ画像">
+                        <img src="<?php echo esc_url(get_theme_file_uri('/images/flow04.jpeg') ); ?>" alt="納品のイメージ画像" loading="lazy">
                     </div>
                     <figcaption>
                         <h4>納品</h4>

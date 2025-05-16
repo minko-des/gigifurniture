@@ -1,15 +1,15 @@
 <?php
 
 function custom_theme_support() {
-    add_theme_support( 'html5', array(   //add_theme_support() テーマに必要な機能を有効化するための関数
-        'search-form',                   //吐き出されるコードをデフォルトの XHTML からHTML5（ Living Standard ）に
+    add_theme_support( 'html5', array(
+        'search-form',
         'comment-form',
         'comment-list',
         'gallery',
         'caption',
     ) );
-    add_theme_support( 'post-thumbnails' );  //投稿ページでアイキャッチ画像を扱えるようにする
-    add_theme_support( 'title-tag' );        //テーマにタイトルタグのサポートを許可する
+    add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'title-tag' );
     add_theme_support( 'wp-block-styles' );
     add_theme_support( 'responsive-embeds' );
     add_theme_support( 'custom-logo', array(
@@ -53,7 +53,7 @@ function custom_theme_support() {
 add_action( 'after_setup_theme', 'custom_theme_support' );
 
 
-// ナビゲーションメニューの構造カスタム
+// ナビゲーションメニュー（spのスライドメニュー）の構造カスタム
 class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
     // 開始タグ（<li>）
     function start_el(&$output, $item, $depth = 0, $args = [], $id = 0) {

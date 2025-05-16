@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -15,7 +14,6 @@
         
         <main class="l-main">
             <header class="l-header">
-
                 <div class="bg-color">
                     <div class="logo-bg"></div>
                     <div class="nav-bg"></div>
@@ -42,11 +40,6 @@
                         <?php get_template_part('template-parts/contact-btn--small'); ?>
                         <?php get_template_part('template-parts/insta-icon'); ?>
                     </div>
-                    
                     <button class="c-menu-btn" aria-label="メニューを開く">MENU</button>
-                    
                 </div>
-
-                
-
             </header>

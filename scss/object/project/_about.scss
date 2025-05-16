@@ -4,21 +4,30 @@
 
 .p-about {
     width: 100%;
-    padding-bottom: 100px;
+    padding-bottom: 60px;
     position: relative;
     @include var.breakpoint(pc) {
-        padding-bottom: 130px;
+        padding-bottom: 80px;
     }
+
+    .about__bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        opacity: 0.15;
+    }
+
 
     .c-section__title {
         width: min-content;
         font-size: clamp(8.0rem, 9.9vw, 15rem);
         color: var.$black;
-        padding-top: 60px;
+        padding-top: 50px;
         margin: 0 auto;
         border-bottom: 3px solid var.$fire;
         @include var.breakpoint(pc) {
-            padding-top: 100px;
+            padding-top: 90px;
         }
     }
 
@@ -40,26 +49,64 @@
         text-align: center;
         line-height: 1.8;
         width: 86%;
-        margin: 32px auto 0 auto;
+        margin: 24px auto 0 auto;
         @include var.breakpoint(tablet) {
             width: 64%;
         }
         @include var.breakpoint(pc) {
-            margin-top: 60px;
+            margin-top: 48px;
             width: 50%;
+        }
+    }
+
+    .company-info {
+        width: 86%;
+        max-width: 470px;
+        margin: 36px auto 0 auto;
+        border-top: 1px solid var.$fire;
+        padding-top: 10px;
+        @include var.breakpoint(tablet) {
+            width: 64%;
+        }
+        @include var.breakpoint(pc) {
+            width: 50%;
+        }
+        
+        &__name,&__address {
+            color: var.$black;
+            display: flex;
+            align-items: center;
+
+            .title {
+                width: 72px;
+                flex-shrink: 0;
+            }
+            
+            .name {
+                font-size: 2.0rem;
+                font-weight: 500;
+            }
+        }
+        
+        &__address {
+            margin-top: 6px;
+            
+            address {
+                font-style: normal;
+            }
         }
     }
 }
 
-.p-about::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-image: url(../images/bgimg_about.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.1;
-    position: absolute;
-    top: 0;
-}
+// .p-about::before {
+//     content: '';
+//     width: 100%;
+//     height: 100%;
+//     background-image: url(../images/bgimg_about.jpeg);
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     opacity: 0.1;
+//     position: absolute;
+//     top: 0;
+// }

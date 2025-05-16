@@ -59,11 +59,13 @@
     }
 }
 
-.page-id-79 .l-header .p-header {
-    .header__nav .menu .menu-item {
-        color: var.$black;
-        a {
-            text-shadow: none;
+.page-id-79,.error404 {
+    .l-header .p-header {
+        .header__nav .menu .menu-item {
+            color: var.$black;
+            a {
+                text-shadow: none;
+            }
         }
     }
 }

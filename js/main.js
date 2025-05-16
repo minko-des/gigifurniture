@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (images.length > 0) {
         let currentIndex = 0;
         setInterval(() => {
-            // 現在の画像を非表示にする
+            // 現在の画像を非表示
             images[currentIndex].classList.add("hidden");
-            // 次の画像を表示する
+            // 次の画像を表示
             currentIndex = (currentIndex + 1) % images.length;
             images[currentIndex].classList.remove("hidden");
-        }, 8000);
+        }, 7500);
     }
 
 
@@ -29,44 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.scrollY === 0) {
         bgColor.classList.add('hidden');
     }
-
-
-    // 自動スライダー、無限ループ関数
-    const sliderContainer = document.querySelector(".slider-container");
-    const sliderItem = document.querySelector(".logo-wrap");
-    const screenWidth = window.innerWidth; // 画面幅を取得
-    // アイテムを複製して画面幅を埋める
-    let itemWidth = sliderItem.offsetWidth; //要素幅を取得
-    const itemsNeeded = Math.ceil(screenWidth / itemWidth) + 1; // 画面幅を超えるために+1
-    
-    for (let i = 0; i < itemsNeeded; i++) {
-        const clone = sliderItem.cloneNode(true); //要素の複製
-        sliderContainer.appendChild(clone); //複製した要素（clone）をsliderContainerに追加
-    }
-    let currentPosition = 0;
-
-    // スライド関数
-    function slide() {
-        currentPosition -= 0.8; // 1フレームあたりの移動量
-        if (Math.abs(currentPosition) >= itemWidth) {
-            currentPosition = 0; // リセット
-            // 先頭のアイテムを末尾に移動
-            const firstItem = sliderContainer.firstElementChild;
-            sliderContainer.appendChild(firstItem);
-        }
-        sliderContainer.style.transform = `translateX(${currentPosition}px)`; // 移動を適用
-        requestAnimationFrame(slide); // アニメーションを繰り返す
-    }
-    
-    window.addEventListener('resize', () => {
-        itemWidth = sliderItem.offsetWidth; // 幅を更新
-        currentPosition = 0; // 位置をリセット
-        sliderContainer.style.transform = `translateX(0px)`; // 位置を初期化
-    });
-    
-    console.log("itemWidth:", itemWidth); // 正しく 1082px とか出てる？
-
-    slide();
 
 
     // メニューページ表示非表示関数
@@ -116,8 +78,33 @@ document.addEventListener("DOMContentLoaded", () => {
             prevEl: '.swiper-button-prev',
         },
     });
-    
 
+    // 自動スライダー
+    const mySwiperAuto = new Swiper('.swiper_auto', {
+        // Optional parameters
+        loop: true,
+        spaceBetween: 50,
+        speed: 7000,
+        allowTouchMove: false,
+        autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+        },
+        slidesPerView: 3,
+        breakpoints: {
+            500: {
+                slidesPerView: 4,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            1300: {
+                slidesPerView: 4,
+            },
+        },
+    });
+    
+    
     // スクロールによるアニメーション発火
     window.addEventListener('scroll', function () {
         const elements = document.querySelectorAll('.slideInFromUnder, .slideInFromLeft, .slideInFromRight, .fadeIn');

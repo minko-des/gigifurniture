@@ -34,7 +34,7 @@
             <?php
             if ($custom_query->have_posts()) :
                 while ($custom_query->have_posts()) : $custom_query->the_post();
-                get_template_part('template-parts/originalitem-card--type1');
+                get_template_part('template-parts/originalitem-card');
                 endwhile;
                 
             else :

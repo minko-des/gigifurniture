@@ -32,20 +32,35 @@
     }
 }
 
-.page-id-79 .c-contact-btn--small {
+.page-id-79,.error404 {
+    .c-contact-btn--small {
     background-color: var.$gray;
     border: 1.5px solid var.$black;
-    a {
-        color: var.$black;
+        a {
+            color: var.$black;
+        }
     }
 }
-.page-id-79 .c-contact-btn--small:hover {
-    background-color: var.$black;
-    border: 1px solid var.$gray;
+
+.page-id-79,.error404 {
+    .c-contact-btn--small:hover {
+        background-color: var.$black;
+        border: 1px solid var.$gray;
+        a {
+            font-weight: 500;
+            color: var.$gray;
+            letter-spacing: 0.2rem;
+        }
+    }
+}
+.error404 .c-contact-btn--small {
+    background-color: var.$white;
+}
+
+.error404 .c-contact-btn--small:hover {
+    border: 1px solid var.$white;
     a {
-        font-weight: 500;
-        color: var.$gray;
-        letter-spacing: 0.2rem;
+        color: var.$white;
     }
 }
 

@@ -20,10 +20,12 @@
     } 
 }
 
-.page-id-79 .l-header .p-header {
-    .c-gigi-logo a svg {
-        fill: var.$black;
-        filter: drop-shadow( 1px 1px 0 var.$gray);
+.page-id-79,.error404 {
+    .l-header .p-header {
+        .c-gigi-logo a svg {
+            fill: var.$black;
+            filter: drop-shadow( 1px 1px 0 var.$gray);
+        }
     }
 }
 

@@ -3,9 +3,9 @@
     <section class="p-main-visual">
         <div class="img__container">
             <img class="main-visual__img" src="<?php echo esc_url(get_theme_file_uri('/images/mainvisual01.jpg') ); ?>" alt="">
-            <img class="main-visual__img hidden" src="<?php echo esc_url(get_theme_file_uri('/images/mainvisual02.jpg') ); ?>" alt="">
-            <img class="main-visual__img hidden" src="<?php echo esc_url(get_theme_file_uri('/images/mainvisual03.jpg') ); ?>" alt="">
             <img class="main-visual__img hidden" src="<?php echo esc_url(get_theme_file_uri('/images/mainvisual04.jpg') ); ?>" alt="">
+            <img class="main-visual__img hidden" src="<?php echo esc_url(get_theme_file_uri('/images/mainvisual03.jpg') ); ?>" alt="">
+            <img class="main-visual__img hidden" src="<?php echo esc_url(get_theme_file_uri('/images/mainvisual02.jpg') ); ?>" alt="">
         </div>
             <p class="catch-copy">Making <span>Iron</span> <span>Products.</span></p>
             <p class="concept">
@@ -15,6 +15,7 @@
     </section>
     
     <section class="p-about" id="about">
+        <img class="about__bg" src="<?php echo esc_url(get_theme_file_uri('/images/bgimg_about.jpg') ); ?>" alt="" loading="eager">
         <p class="c-section__title fadeIn">About</p>
         <h2 class="about__lead fadeIn">gigi furnitureについて</h2>
         <p class="about__text fadeIn">
@@ -23,6 +24,16 @@
             鉄や木材の素材感を活かしたインダストリアルデザインが特徴で、使い込むほどに味わいが増す素材の魅力を感じていただきたいと考えています。<br><br>
             gigi furniture は、暮らしに温かみとスタイルをもたらす製品づくりを通じて、お客様とともに新しい価値を創造していきます。
         </p>
+        <div class="company-info fadeIn">
+            <div class="company-info__name">
+                <p class="title">会社名</p>
+                <p class="name">澤田鈑金</p>
+            </div>
+            <div class="company-info__address">
+                <p class="title">住所</p>
+                <address>〒458-0801 愛知県名古屋市緑区鳴海町中汐田192-2</address>
+            </div>
+        </div>
     </section>
     
     <?php get_template_part('template-parts/orderproduct'); ?>

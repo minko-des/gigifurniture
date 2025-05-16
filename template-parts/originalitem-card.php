@@ -1,4 +1,4 @@
-<figure class="originalitem-card--type1">
+<figure class="originalitem-card">
     <a class="originalitem-card__img" href="<?php echo esc_url(get_field('item-url')); ?>" target="_blank" rel="noopener noreferrer">
         <img src="<?php echo esc_url(get_field('item-image')); ?>" alt="商品画像" loading="lazy">
     </a>
